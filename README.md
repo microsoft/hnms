@@ -1,3 +1,27 @@
+# Hashing-based Non-Maximum Suppression
+
+## Installation
+```
+git clone https://github.com/microsoft/hnms.git
+python setup.py install
+```
+
+## Usage
+```
+import torch
+from hnms import MultiHNMS
+
+hnms = MultiHNMS(num=1, alpha=0.7)
+
+# center x, center y, width, height
+xywh = [[10, 20, 10, 20], [10, 20, 10, 20], [30, 6, 4, 5]]
+conf = [0.9, 0.8, 0.9]
+xywh = torch.tensor(xywh).float()
+conf = torch.tensor(conf)
+keep = hnms(xywh, conf)
+print(keep)
+```
+
 
 # Contributing
 
