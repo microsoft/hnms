@@ -5,6 +5,8 @@
 git clone https://github.com/microsoft/hnms.git
 python setup.py install
 ```
+The code has been tested with ubuntu16.4, python 3.6, cuda 10.1, pytorch 1.4 (1.5 as
+well).
 
 ## Usage
 ```

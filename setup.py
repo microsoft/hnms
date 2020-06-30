@@ -7,6 +7,8 @@ ext_folder = 'hnms/extension/'
 
 include_dirs = [op.join(ext_folder, 'include')]
 
+include_dirs = [op.abspath(i) for i in include_dirs]
+
 setup(
     name='hnms',
     ext_modules=[
