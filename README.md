@@ -24,6 +24,23 @@ keep = hnms(xywh, conf)
 print(keep)
 ```
 
+## Reference
+```
+@article{DBLP:journals/corr/abs-2005-11426,
+  author    = {Jianfeng Wang and
+               Xi Yin and
+               Lijuan Wang and
+               Lei Zhang},
+  title     = {Hashing-based Non-Maximum Suppression for Crowded Object Detection},
+  journal   = {CoRR},
+  volume    = {abs/2005.11426},
+  year      = {2020},
+  url       = {https://arxiv.org/abs/2005.11426},
+  archivePrefix = {arXiv},
+  eprint    = {2005.11426},
+}
+```
+
 
 # Contributing
 
