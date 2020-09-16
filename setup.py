@@ -1,3 +1,5 @@
+import torch
+import os
 import os.path as op
 from setuptools import setup
 from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension
