@@ -85,9 +85,8 @@ at::Tensor hnms_cpu(const at::Tensor& dets,
                float bx,
                float by
                ) {
-    AT_ASSERTM(!dets.type().is_cuda(), "dets must be a CPU tensor");
-    AT_ASSERTM(!scores.type().is_cuda(), "scores must be a CPU tensor");
-    AT_ASSERTM(dets.type() == scores.type(), "dets should have the same type as scores");
+    AT_ASSERTM(!dets.is_cuda(), "dets must be a CPU tensor");
+    AT_ASSERTM(!scores.is_cuda(), "scores must be a CPU tensor");
     if (dets.numel() == 0) {
       return at::empty({0}, dets.options().dtype(at::kLong).device(at::kCPU));
     }
@@ -107,7 +106,7 @@ at::Tensor hnms(const at::Tensor& dets,
                float bx,
                float by
                ) {
-  if (dets.type().is_cuda()) {
+  if (dets.is_cuda()) {
 #ifdef WITH_CUDA
       if (dets.numel() == 0)
           return at::empty({0}, dets.options().dtype(at::kLong).device(at::kCPU));
